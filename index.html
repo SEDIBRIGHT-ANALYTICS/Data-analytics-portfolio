@@ -70,17 +70,40 @@
             color: var(--secondary);
         }
 
+        /* HERO SECTION */
+
         .hero {
             min-height: 520px;
-            padding: 100px 8%;
+            padding: 80px 8%;
             display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
             align-items: center;
+            gap: 40px;
             background: linear-gradient(120deg, #123b63, #087e8b);
             color: var(--white);
         }
 
         .hero-content {
             max-width: 780px;
+            flex: 1;
+        }
+
+        .hero-image {
+            flex: 0 0 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            border: 6px solid rgba(255, 255, 255, 0.85);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
         }
 
         .hero-label {
@@ -292,7 +315,10 @@
             font-size: 14px;
         }
 
+        /* MOBILE RESPONSIVENESS */
+
         @media (max-width: 768px) {
+
             header {
                 flex-direction: column;
                 gap: 15px;
@@ -304,7 +330,27 @@
             }
 
             .hero {
-                padding: 75px 7%;
+                flex-direction: column;
+                padding: 55px 7%;
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-image {
+                flex: none;
+            }
+
+            .hero-image img {
+                width: 210px;
+                height: 210px;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
             }
 
             section {
@@ -315,6 +361,7 @@
                 padding: 25px;
             }
         }
+
     </style>
 </head>
 
@@ -335,7 +382,13 @@
 </header>
 
 <section class="hero" id="home">
+
+    <div class="hero-image">
+        <img src="profile.jpg.jpg" alt="Professional photograph of Muhammed Sediq Sule">
+    </div>
+
     <div class="hero-content">
+
         <div class="hero-label">Welcome to my portfolio</div>
 
         <h1>Muhammed Sediq Sule</h1>
@@ -350,16 +403,20 @@
 
         <a href="#projects" class="button">Explore My Work</a>
         <a href="#contact" class="button button-outline">Contact Me</a>
+
     </div>
+
 </section>
 
 <section id="about">
+
     <div class="section-title">
         <h2>About Me</h2>
         <p>Get to know me and my professional journey.</p>
     </div>
 
     <div class="about-content">
+
         <p>
             I am a Data Analyst with advanced proficiency in Microsoft
             Excel, SQL and Power BI, with practical experience gained
@@ -385,10 +442,13 @@
             communicating insights and continuously developing my
             capabilities in the field of data analytics.
         </p>
+
     </div>
+
 </section>
 
 <section id="skills">
+
     <div class="section-title">
         <h2>Technical Skills</h2>
         <p>Tools and analytical capabilities I work with.</p>
@@ -438,9 +498,11 @@
         </div>
 
     </div>
+
 </section>
 
 <section id="experience">
+
     <div class="section-title">
         <h2>Experience & Practical Training</h2>
         <p>My professional training and academic research experience.</p>
@@ -449,7 +511,9 @@
     <div class="experience">
 
         <div class="experience-item">
+
             <h3>Data Analytics Trainee – Digital Empowered Academy (DEA)</h3>
+
             <div class="date">Professional Training Completed</div>
 
             <ul>
@@ -458,9 +522,11 @@
                 <li>Developed analytical reports and visual presentations to communicate findings.</li>
                 <li>Applied analytical techniques to identify trends, patterns and insights.</li>
             </ul>
+
         </div>
 
         <div class="experience-item">
+
             <h3>Academic Research Experience – Ahmadu Bello University</h3>
 
             <ul>
@@ -468,12 +534,15 @@
                 <li>Applied research methods to organise, interpret and present collected data.</li>
                 <li>Developed skills in research documentation and evidence-based interpretation.</li>
             </ul>
+
         </div>
 
     </div>
+
 </section>
 
 <section id="projects">
+
     <div class="section-title">
         <h2>Selected Projects</h2>
         <p>Practical learning and research activities.</p>
@@ -505,9 +574,11 @@
         Detailed project descriptions, dashboards and supporting
         materials will be added as portfolio projects are published.
     </p>
+
 </section>
 
 <section id="education">
+
     <div class="section-title">
         <h2>Education</h2>
         <p>My academic qualification.</p>
@@ -519,9 +590,11 @@
         <p>Kaduna State, Nigeria</p>
         <p>2026</p>
     </div>
+
 </section>
 
 <section id="training">
+
     <div class="section-title">
         <h2>Certifications & Professional Training</h2>
         <p>My completed and ongoing professional development.</p>
@@ -556,37 +629,49 @@
         </div>
 
     </div>
+
 </section>
 
 <section id="contact" class="contact">
+
     <div class="section-title">
         <h2>Let's Connect</h2>
         <p>Feel free to reach out for professional opportunities and collaboration.</p>
     </div>
 
     <div class="contact-details">
-        <p><strong>Email:</strong>
+
+        <p>
+            <strong>Email:</strong>
             <a href="mailto:sediqmuhammed8@gmail.com">
                 sediqmuhammed8@gmail.com
             </a>
         </p>
 
-        <p><strong>Location:</strong> Samaru, Zaria, Kaduna State, Nigeria</p>
+        <p>
+            <strong>Location:</strong> Samaru, Zaria, Kaduna State, Nigeria
+        </p>
 
-        <p><strong>GitHub:</strong>
+        <p>
+            <strong>GitHub:</strong>
             <a href="https://github.com/SEDIBRIGHT-ANALYTICS" target="_blank" rel="noopener noreferrer">
                 SEDIBRIGHT-ANALYTICS
             </a>
         </p>
+
     </div>
+
 </section>
 
 <footer>
+
     <p>
         &copy; 2026 Muhammed Sediq Sule.
         All Rights Reserved.
     </p>
+
     <p>Data Analyst | Turning Data into Insights.</p>
+
 </footer>
 
 </body>
