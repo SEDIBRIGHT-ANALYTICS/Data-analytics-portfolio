@@ -1,22 +1,28 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Muhammed Sediq Sule | Data Analyst</title>
+    <title>Muhammed Sediq Sule | Data Analyst Portfolio</title>
 
-    <meta name="description" content="Professional portfolio of Muhammed Sediq Sule, a Data Analyst skilled in Excel, SQL, Power BI and data visualisation.">
+    <meta name="description" content="Explore the professional data analytics portfolio of Muhammed Sediq Sule, showcasing projects, analytical skills, Excel dashboards, SQL and Power BI.">
+
+    <meta name="theme-color" content="#101c2c">
 
     <style>
         :root {
-            --primary: #123b63;
-            --secondary: #087e8b;
-            --dark: #172b3a;
-            --light: #f4f7fb;
+            --navy: #101c2c;
+            --navy-light: #18283b;
+            --green: #10b981;
+            --green-dark: #059669;
+            --mint: #d1fae5;
+            --cream: #f7f9f7;
             --white: #ffffff;
-            --text: #536273;
+            --text: #526174;
+            --heading: #17283b;
+            --border: #e7ece9;
+            --shadow: 0 12px 35px rgba(16, 28, 44, 0.07);
         }
 
         * {
@@ -27,167 +33,322 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: var(--light);
-            color: var(--dark);
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--cream);
+            color: var(--heading);
             line-height: 1.7;
+            overflow-x: hidden;
         }
 
         a {
             text-decoration: none;
         }
 
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* NAVIGATION */
+
         header {
-            background: var(--white);
-            padding: 18px 8%;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(15px);
+            padding: 16px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border-bottom: 1px solid var(--border);
         }
 
         .logo {
-            color: var(--primary);
-            font-size: 21px;
-            font-weight: bold;
+            color: var(--navy);
+            font-size: 23px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--green-dark);
         }
 
         nav {
             display: flex;
-            gap: 22px;
-            flex-wrap: wrap;
+            align-items: center;
+            gap: 24px;
         }
 
         nav a {
-            color: var(--dark);
-            font-size: 14px;
-            font-weight: 600;
+            color: #536273;
+            font-size: 13px;
+            font-weight: 650;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: var(--secondary);
+            color: var(--green-dark);
         }
 
-        /* HERO SECTION */
+        nav .nav-contact {
+            background: var(--navy);
+            color: var(--white);
+            padding: 10px 19px;
+            border-radius: 7px;
+        }
+
+        nav .nav-contact:hover {
+            background: var(--green-dark);
+            color: var(--white);
+        }
+
+        /* HERO */
 
         .hero {
-            min-height: 520px;
-            padding: 80px 8%;
+            min-height: 610px;
+            padding: 85px 8%;
+            background:
+                radial-gradient(circle at 85% 20%, rgba(16, 185, 129, 0.20), transparent 28%),
+                radial-gradient(circle at 10% 90%, rgba(16, 185, 129, 0.12), transparent 30%),
+                linear-gradient(125deg, #101c2c 0%, #172e42 60%, #123e42 100%);
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;
             align-items: center;
-            gap: 40px;
-            background: linear-gradient(120deg, #123b63, #087e8b);
+            gap: 65px;
             color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 50%;
+            right: -100px;
+            bottom: -180px;
         }
 
         .hero-content {
-            max-width: 780px;
+            max-width: 730px;
             flex: 1;
-        }
-
-        .hero-image {
-            flex: 0 0 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image img {
-            width: 280px;
-            height: 280px;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 50%;
-            border: 6px solid rgba(255, 255, 255, 0.85);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            position: relative;
+            z-index: 2;
         }
 
         .hero-label {
-            color: #bcecf0;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(16,185,129,0.13);
+            color: #6ee7b7;
+            border: 1px solid rgba(110,231,183,0.25);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 13px;
-            font-weight: bold;
+        }
+
+        .hero-label::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--green);
         }
 
         .hero h1 {
-            font-size: clamp(38px, 6vw, 65px);
-            line-height: 1.15;
-            margin: 20px 0;
+            font-size: clamp(39px, 6vw, 68px);
+            line-height: 1.12;
+            letter-spacing: -2px;
+            margin: 25px 0 15px;
+        }
+
+        .hero h1 span {
+            color: #6ee7b7;
         }
 
         .hero h2 {
-            font-size: 25px;
+            font-size: clamp(19px, 2.5vw, 25px);
             font-weight: 500;
-            margin-bottom: 18px;
+            color: #cbd9e5;
+            margin-bottom: 20px;
         }
 
         .hero p {
-            font-size: 17px;
-            max-width: 650px;
-            color: #e3f1f5;
+            max-width: 620px;
+            color: #c2d0dc;
+            font-size: 16px;
             margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
         }
 
         .button {
             display: inline-block;
-            background: var(--white);
-            color: var(--primary);
-            padding: 12px 25px;
-            border-radius: 6px;
-            font-weight: bold;
-            margin-right: 10px;
-            margin-bottom: 10px;
+            padding: 13px 23px;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: 700;
             transition: 0.3s;
         }
 
-        .button:hover {
-            background: #d9f3f3;
+        .button-primary {
+            background: var(--green);
+            color: #06251b;
+        }
+
+        .button-primary:hover {
+            background: #6ee7b7;
             transform: translateY(-3px);
         }
 
         .button-outline {
-            background: transparent;
-            border: 1px solid white;
-            color: white;
+            border: 1px solid rgba(255,255,255,0.4);
+            color: var(--white);
         }
 
+        .button-outline:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            flex: 0 0 300px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-image::before {
+            content: "";
+            position: absolute;
+            inset: -15px;
+            border: 2px solid rgba(110,231,183,0.5);
+            border-radius: 50%;
+        }
+
+        .hero-image img {
+            width: 290px;
+            height: 290px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            border: 6px solid rgba(255,255,255,0.9);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        /* HIGHLIGHT STRIP */
+
+        .highlights {
+            background: var(--white);
+            padding: 27px 8%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .highlight-item {
+            text-align: center;
+            border-right: 1px solid var(--border);
+        }
+
+        .highlight-item:last-child {
+            border-right: none;
+        }
+
+        .highlight-item strong {
+            display: block;
+            color: var(--navy);
+            font-size: 19px;
+            font-weight: 800;
+        }
+
+        .highlight-item span {
+            color: var(--text);
+            font-size: 13px;
+        }
+
+        /* GENERAL SECTIONS */
+
         section {
-            padding: 75px 8%;
+            padding: 85px 8%;
+            scroll-margin-top: 75px;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 45px;
+            max-width: 700px;
+            margin: 0 auto 48px;
+        }
+
+        .section-label {
+            color: var(--green-dark);
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
         }
 
         .section-title h2 {
-            font-size: 32px;
-            color: var(--primary);
-            margin-bottom: 10px;
+            font-size: clamp(28px, 4vw, 38px);
+            color: var(--navy);
+            margin: 9px 0;
+            letter-spacing: -1px;
         }
 
         .section-title p {
             color: var(--text);
+            font-size: 15px;
         }
 
+        /* ABOUT */
+
         .about-content {
-            max-width: 900px;
+            max-width: 950px;
             margin: auto;
             background: var(--white);
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            padding: 42px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
         }
 
         .about-content p {
             color: var(--text);
-            margin-bottom: 15px;
+            margin-bottom: 17px;
+            font-size: 15px;
+        }
+
+        .about-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-highlight {
+            border-left: 4px solid var(--green);
+            padding: 18px 22px;
+            background: #effbf5;
+            border-radius: 0 9px 9px 0;
+            color: #245a43;
+            margin-top: 23px;
+            font-size: 14px;
+        }
+
+        /* SKILLS */
+
+        .skills-section {
+            background: #edf4f1;
         }
 
         .skills-grid,
@@ -200,91 +361,274 @@
 
         .card {
             background: var(--white);
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.04);
-            transition: 0.3s;
+            padding: 27px;
+            border-radius: 13px;
+            border: 1px solid var(--border);
+            box-shadow: 0 5px 20px rgba(16,28,44,0.035);
+            transition: 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(16,28,44,0.09);
+            border-color: rgba(16,185,129,0.5);
+        }
+
+        .card-icon {
+            width: 43px;
+            height: 43px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--mint);
+            color: var(--green-dark);
+            border-radius: 11px;
+            font-weight: 800;
+            font-size: 14px;
+            margin-bottom: 19px;
         }
 
         .card h3 {
-            color: var(--primary);
-            margin-bottom: 12px;
-            font-size: 19px;
+            color: var(--navy);
+            margin-bottom: 10px;
+            font-size: 18px;
         }
 
         .card p {
             color: var(--text);
-            font-size: 15px;
+            font-size: 14px;
         }
 
+        /* EXPERIENCE */
+
         .experience {
-            max-width: 900px;
+            max-width: 950px;
             margin: auto;
         }
 
         .experience-item {
             background: var(--white);
-            padding: 28px;
+            padding: 30px;
             margin-bottom: 22px;
-            border-left: 5px solid var(--secondary);
-            border-radius: 8px;
+            border-left: 4px solid var(--green);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
         }
 
         .experience-item h3 {
-            color: var(--primary);
-            margin-bottom: 5px;
+            color: var(--navy);
+            margin-bottom: 6px;
+            font-size: 19px;
         }
 
         .experience-item .date {
-            color: var(--secondary);
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 12px;
+            color: var(--green-dark);
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 15px;
         }
 
         .experience-item ul {
-            padding-left: 20px;
+            padding-left: 21px;
             color: var(--text);
+            font-size: 14px;
         }
 
         .experience-item li {
-            margin-bottom: 7px;
+            margin-bottom: 8px;
+        }
+
+        /* PROJECTS */
+
+        .projects-section {
+            background: #edf4f1;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(16,28,44,0.12);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 235px;
+            background: #e7efeb;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.5s;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.035);
+        }
+
+        .project-body {
+            padding: 27px;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: var(--mint);
+            color: #08734e;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 5px 11px;
+            border-radius: 20px;
+            margin-bottom: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+        }
+
+        .project-body h3 {
+            color: var(--navy);
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .project-body p {
+            color: var(--text);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .project-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 17px 0 22px;
+        }
+
+        .project-tools span {
+            background: #f0f3f4;
+            color: #526174;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 6px;
+            background: var(--navy);
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .project-link:hover {
+            background: var(--green-dark);
+        }
+
+        .project-link.secondary {
+            background: #edf4f1;
+            color: var(--navy);
+        }
+
+        .project-link.secondary:hover {
+            background: var(--mint);
+            color: #08734e;
         }
 
         .project-note {
-            margin-top: 25px;
+            margin-top: 35px;
             text-align: center;
             color: var(--text);
             font-size: 14px;
         }
 
-        .education-box {
-            max-width: 750px;
-            margin: auto;
+        /* EDUCATION */
+
+        .education-section {
             background: var(--white);
-            padding: 35px;
-            border-radius: 10px;
+        }
+
+        .education-box {
+            max-width: 760px;
+            margin: auto;
+            background: linear-gradient(120deg, #101c2c, #183b43);
+            padding: 42px;
+            border-radius: 15px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            color: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .education-box .education-label {
+            color: #6ee7b7;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .education-box h3 {
-            color: var(--primary);
-            font-size: 22px;
+            font-size: 24px;
+            margin: 12px 0;
         }
 
         .education-box p {
-            color: var(--text);
-            margin-top: 8px;
+            color: #d1dce3;
+            margin-top: 7px;
+            font-size: 14px;
         }
 
+        /* TRAINING */
+
+        .training-section {
+            background: #edf4f1;
+        }
+
+        .training-grid .card {
+            border-top: 3px solid var(--green);
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: #e7f8ef;
+            color: #08734e;
+        }
+
+        .status.ongoing {
+            background: #fff4dc;
+            color: #98620b;
+        }
+
+        /* CONTACT */
+
         .contact {
-            background: var(--primary);
+            background:
+                radial-gradient(circle at 90% 10%, rgba(16,185,129,0.16), transparent 30%),
+                linear-gradient(120deg, #101c2c, #173d43);
             color: var(--white);
             text-align: center;
         }
@@ -294,59 +638,141 @@
             color: var(--white);
         }
 
+        .contact .section-label {
+            color: #6ee7b7;
+        }
+
         .contact-details {
             max-width: 650px;
             margin: auto;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 13px;
+            padding: 30px;
         }
 
         .contact-details p {
             margin: 15px 0;
-            font-size: 17px;
+            font-size: 15px;
+            color: #d4e0e5;
         }
 
         .contact-details a {
-            color: #bcecf0;
+            color: #6ee7b7;
+            transition: 0.3s;
         }
+
+        .contact-details a:hover {
+            color: var(--white);
+        }
+
+        /* FOOTER */
 
         footer {
-            background: #10283e;
-            color: #d5e1ea;
+            background: #0b1522;
+            color: #aab8c5;
             text-align: center;
-            padding: 22px 8%;
-            font-size: 14px;
+            padding: 27px 8%;
+            font-size: 13px;
         }
 
-        /* MOBILE RESPONSIVENESS */
+        footer strong {
+            color: var(--green);
+        }
 
-        @media (max-width: 768px) {
+        /* ANIMATIONS */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content,
+        .hero-image {
+            animation: fadeUp 0.8s ease both;
+        }
+
+        .hero-image {
+            animation-delay: 0.15s;
+        }
+
+        /* RESPONSIVENESS */
+
+        @media (max-width: 900px) {
+
+            header {
+                padding: 15px 5%;
+            }
+
+            nav {
+                gap: 13px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 75px 6%;
+                gap: 35px;
+            }
+
+            .hero-image {
+                flex-basis: 240px;
+            }
+
+            .hero-image img {
+                width: 230px;
+                height: 230px;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+        }
+
+        @media (max-width: 650px) {
 
             header {
                 flex-direction: column;
-                gap: 15px;
+                gap: 13px;
             }
 
             nav {
                 justify-content: center;
-                gap: 13px;
+                flex-wrap: wrap;
+                gap: 12px 16px;
             }
 
             .hero {
                 flex-direction: column;
-                padding: 55px 7%;
                 text-align: center;
+                padding: 65px 7%;
+                gap: 45px;
             }
 
             .hero-content {
-                max-width: 100%;
+                order: 2;
             }
 
             .hero-image {
+                order: 1;
                 flex: none;
             }
 
             .hero-image img {
-                width: 210px;
-                height: 210px;
+                width: 205px;
+                height: 205px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
             }
 
             .hero p {
@@ -354,12 +780,54 @@
                 margin-right: auto;
             }
 
-            section {
-                padding: 55px 7%;
+            .hero-buttons {
+                justify-content: center;
             }
 
-            .about-content {
-                padding: 25px;
+            .highlights {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .highlight-item {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+                padding-bottom: 14px;
+            }
+
+            .highlight-item:last-child {
+                border-bottom: none;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+            .about-content,
+            .education-box {
+                padding: 27px;
+            }
+
+            .experience-item {
+                padding: 23px;
+            }
+
+            .project-image {
+                height: 200px;
+            }
+
+            .contact-details {
+                padding: 20px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
             }
         }
 
@@ -369,7 +837,8 @@
 <body>
 
 <header>
-    <div class="logo">Sediq Sule.</div>
+
+    <a href="#home" class="logo">Sediq<span>.</span></a>
 
     <nav>
         <a href="#home">Home</a>
@@ -378,9 +847,13 @@
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
+        <a href="#training">Training</a>
+        <a href="#contact" class="nav-contact">Contact Me</a>
     </nav>
+
 </header>
+
+<!-- HERO SECTION -->
 
 <section class="hero" id="home">
 
@@ -392,125 +865,186 @@
 
         <div class="hero-label">Welcome to my portfolio</div>
 
-        <h1>Muhammed Sediq Sule</h1>
+        <h1>Muhammed Sediq <span>Sule.</span></h1>
 
         <h2>Data Analyst | Excel | SQL | Power BI</h2>
 
         <p>
-            I transform data into meaningful insights that support
-            informed decisions and solve real-world problems.
-            Explore my skills, experience, training and projects.
+            I turn raw data into meaningful insights. Through data analysis,
+            visualisation and storytelling, I explore patterns, uncover
+            opportunities and communicate findings that support informed decisions.
         </p>
 
-        <a href="#projects" class="button">Explore My Work</a>
-        <a href="#contact" class="button button-outline">Contact Me</a>
-        <a href="https://www.linkedin.com/in/sediq-muhammed-404b743a1/"
-           class="button button-outline"
-           target="_blank"
-           rel="noopener noreferrer">LinkedIn Profile</a>
+        <div class="hero-buttons">
+
+            <a href="#projects" class="button button-primary">
+                Explore My Projects
+            </a>
+
+            <a href="#contact" class="button button-outline">
+                Get In Touch
+            </a>
+
+            <a href="https://www.linkedin.com/in/sediq-muhammed-404b743a1/"
+               class="button button-outline"
+               target="_blank"
+               rel="noopener noreferrer">
+                LinkedIn Profile
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
+<!-- HIGHLIGHTS -->
+
+<div class="highlights">
+
+    <div class="highlight-item">
+        <strong>Excel | SQL | Power BI</strong>
+        <span>Analytical Tools</span>
+    </div>
+
+    <div class="highlight-item">
+        <strong>Data Analysis & Visualisation</strong>
+        <span>Core Capabilities</span>
+    </div>
+
+    <div class="highlight-item">
+        <strong>Ahmadu Bello University</strong>
+        <span>Academic Background</span>
+    </div>
+
+</div>
+
+<!-- ABOUT -->
+
 <section id="about">
 
     <div class="section-title">
+        <span class="section-label">A little about me</span>
         <h2>About Me</h2>
-        <p>Get to know me and my professional journey.</p>
+        <p>My background, interests and professional journey.</p>
     </div>
 
     <div class="about-content">
 
         <p>
-            I am a Data Analyst with advanced proficiency in Microsoft
-            Excel, SQL and Power BI, with practical experience gained
-            through professional training and multiple data analytics
-            projects.
+            I am a Data Analyst with practical experience in Microsoft Excel,
+            SQL and Power BI, developed through professional training,
+            independent learning and hands-on analytical projects.
         </p>
 
         <p>
             I completed Data Analytics training through Digital Empowered
-            Academy (DEA), with additional professional development
-            through CHM Academy and Cisco Networking Academy.
+            Academy (DEA), with additional professional development through
+            CHM Academy and Cisco Networking Academy.
         </p>
 
         <p>
             I also hold a Bachelor of Nursing Science degree from
-            Ahmadu Bello University, Zaria. My academic background
-            has strengthened my research, analytical thinking,
-            data interpretation and evidence-based decision-making skills.
+            Ahmadu Bello University, Zaria. My academic background has
+            strengthened my research, analytical thinking, data interpretation
+            and evidence-based decision-making skills.
         </p>
 
         <p>
-            I am passionate about exploring data, identifying patterns,
-            communicating insights and continuously developing my
-            capabilities in the field of data analytics.
+            I am particularly interested in transforming complex information
+            into clear, useful insights, developing meaningful visualisations
+            and using data to support better decisions.
         </p>
+
+        <div class="about-highlight">
+            My approach combines analytical thinking, attention to detail
+            and a commitment to continuous learning and professional growth.
+        </div>
 
     </div>
 
 </section>
 
-<section id="skills">
+<!-- SKILLS -->
+
+<section id="skills" class="skills-section">
 
     <div class="section-title">
+        <span class="section-label">What I work with</span>
         <h2>Technical Skills</h2>
-        <p>Tools and analytical capabilities I work with.</p>
+        <p>Tools and analytical capabilities developed through training and practical work.</p>
     </div>
 
     <div class="skills-grid">
 
         <div class="card">
+            <div class="card-icon">EX</div>
             <h3>Microsoft Excel</h3>
-            <p>Advanced spreadsheet operations, data organisation,
-            cleaning and analysis.</p>
+            <p>Advanced spreadsheet operations, data organisation, cleaning,
+            PivotTables, PivotCharts and interactive dashboards.</p>
         </div>
 
         <div class="card">
+            <div class="card-icon">SQL</div>
             <h3>SQL</h3>
-            <p>Database querying and working with structured data.</p>
+            <p>Database querying and working with structured datasets
+            to retrieve and examine information.</p>
         </div>
 
         <div class="card">
+            <div class="card-icon">BI</div>
             <h3>Power BI</h3>
-            <p>Data visualisation, reporting and dashboard development.</p>
+            <p>Data visualisation, reporting and dashboard development
+            for communicating analytical findings.</p>
         </div>
 
         <div class="card">
+            <div class="card-icon">DC</div>
             <h3>Data Cleaning</h3>
-            <p>Preparing datasets and improving data quality.</p>
+            <p>Inspecting datasets, identifying inconsistencies and
+            preparing information for reliable analysis.</p>
         </div>
 
         <div class="card">
+            <div class="card-icon">DA</div>
             <h3>Data Analysis</h3>
-            <p>Analysing information, interpreting results and identifying trends.</p>
+            <p>Examining information, interpreting results and
+            identifying meaningful patterns and trends.</p>
         </div>
 
         <div class="card">
+            <div class="card-icon">ED</div>
             <h3>Exploratory Data Analysis</h3>
-            <p>Exploring datasets to identify patterns and meaningful insights.</p>
+            <p>Exploring datasets to understand distributions,
+            relationships and performance patterns.</p>
         </div>
 
         <div class="card">
+            <div class="card-icon">DV</div>
             <h3>Data Visualisation</h3>
-            <p>Presenting analytical findings through clear visual formats.</p>
+            <p>Presenting analytical findings through charts,
+            dashboards and clear visual formats.</p>
         </div>
 
         <div class="card">
-            <h3>Data Reporting</h3>
-            <p>Communicating findings to support informed decisions.</p>
+            <div class="card-icon">RP</div>
+            <h3>Reporting & Interpretation</h3>
+            <p>Communicating findings and developing
+            evidence-based recommendations.</p>
         </div>
 
     </div>
 
 </section>
 
+<!-- EXPERIENCE -->
+
 <section id="experience">
 
     <div class="section-title">
+        <span class="section-label">My journey</span>
         <h2>Experience & Practical Training</h2>
-        <p>My professional training and academic research experience.</p>
+        <p>Professional learning and academic research experience.</p>
     </div>
 
     <div class="experience">
@@ -522,10 +1056,10 @@
             <div class="date">Professional Training Completed</div>
 
             <ul>
-                <li>Gained hands-on experience working with real-world datasets through multiple analytics projects.</li>
-                <li>Applied Excel, SQL and Power BI to data cleaning, analysis and visualisation.</li>
-                <li>Developed analytical reports and visual presentations to communicate findings.</li>
-                <li>Applied analytical techniques to identify trends, patterns and insights.</li>
+                <li>Worked with datasets through practical data analytics exercises and projects.</li>
+                <li>Applied Excel, SQL and Power BI concepts to data preparation, analysis and visualisation.</li>
+                <li>Developed analytical reports and presentations to communicate findings.</li>
+                <li>Completed an individual Adidas Sales Performance Analysis capstone project using Microsoft Excel.</li>
             </ul>
 
         </div>
@@ -534,10 +1068,12 @@
 
             <h3>Academic Research Experience – Ahmadu Bello University</h3>
 
+            <div class="date">Undergraduate Research Experience</div>
+
             <ul>
                 <li>Participated in questionnaire-based academic research and data collection.</li>
-                <li>Applied research methods to organise, interpret and present collected data.</li>
-                <li>Developed skills in research documentation and evidence-based interpretation.</li>
+                <li>Applied research methods to organise, analyse and present collected data.</li>
+                <li>Developed skills in research documentation, descriptive statistics and evidence-based interpretation.</li>
             </ul>
 
         </div>
@@ -546,102 +1082,240 @@
 
 </section>
 
-<section id="projects">
+<!-- PROJECTS -->
+
+<section id="projects" class="projects-section">
 
     <div class="section-title">
+        <span class="section-label">My work</span>
         <h2>Selected Projects</h2>
-        <p>Practical learning and research activities.</p>
+        <p>Practical applications of analytical tools, techniques and problem-solving.</p>
     </div>
 
     <div class="projects-grid">
 
-        <div class="card">
-            <h3>Data Analytics Projects</h3>
-            <p>
-                Completed multiple practical projects through Digital
-                Empowered Academy involving real-world datasets,
-                data analysis and visualisation.
-            </p>
-        </div>
+        <!-- ADIDAS PROJECT -->
 
-        <div class="card">
-            <h3>Undergraduate Academic Research</h3>
-            <p>
-                Conducted academic research as part of the Bachelor
-                of Nursing Science programme at Ahmadu Bello University,
-                Zaria.
-            </p>
-        </div>
+        <article class="project-card">
+
+            <div class="project-image">
+                <img
+                    src="https://raw.githubusercontent.com/SEDIBRIGHT-ANALYTICS/Data-analytics-portfolio/main/adidas-sales-analysis-2020-2021/screenshots/01_Excel_Dashboard.png.jpg"
+                    alt="Adidas Sales Performance Excel Dashboard"
+                    loading="lazy">
+            </div>
+
+            <div class="project-body">
+
+                <span class="project-tag">Featured Project</span>
+
+                <h3>Adidas Sales Performance Analysis & Interactive Excel Dashboard (2020–2021)</h3>
+
+                <p>
+                    An individual data analytics capstone project examining
+                    9,648 Adidas retail sales records across the United States.
+                    The analysis explored product performance, regional sales,
+                    retailer contributions, profitability and sales channels.
+                </p>
+
+                <p>
+                    Developed an interactive Excel dashboard using PivotTables,
+                    PivotCharts and Slicers, supported by data-quality checks,
+                    business insights and practical recommendations.
+                </p>
+
+                <div class="project-tools">
+                    <span>Microsoft Excel</span>
+                    <span>PivotTables</span>
+                    <span>PivotCharts</span>
+                    <span>Slicers</span>
+                    <span>Data Analysis</span>
+                </div>
+
+                <div class="project-links">
+
+                    <a href="https://github.com/SEDIBRIGHT-ANALYTICS/Data-analytics-portfolio/tree/main/adidas-sales-analysis-2020-2021"
+                       class="project-link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View Full Project →
+                    </a>
+
+                    <a href="https://github.com/SEDIBRIGHT-ANALYTICS/Data-analytics-portfolio/blob/main/adidas-sales-analysis-2020-2021/analysis/02_Adidas_Sales_Analysis_Workbook.xlsx.xlsx"
+                       class="project-link secondary"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Excel Workbook
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- ACADEMIC RESEARCH PROJECT -->
+
+        <article class="project-card">
+
+            <div class="project-image">
+                <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=85"
+                    alt="Data analysis and research visualisation"
+                    loading="lazy">
+            </div>
+
+            <div class="project-body">
+
+                <span class="project-tag">Research Experience</span>
+
+                <h3>Undergraduate Academic Research</h3>
+
+                <p>
+                    Conducted questionnaire-based academic research as part
+                    of the Bachelor of Nursing Science programme at
+                    Ahmadu Bello University, Zaria.
+                </p>
+
+                <p>
+                    Applied research methods, data organisation,
+                    descriptive analysis and evidence-based interpretation
+                    to academic research findings.
+                </p>
+
+                <div class="project-tools">
+                    <span>Research</span>
+                    <span>Data Collection</span>
+                    <span>Data Analysis</span>
+                    <span>Reporting</span>
+                </div>
+
+            </div>
+
+        </article>
 
     </div>
 
     <p class="project-note">
-        Detailed project descriptions, dashboards and supporting
-        materials will be added as portfolio projects are published.
+        More analytical projects and practical case studies will be
+        added as my portfolio continues to grow.
     </p>
 
 </section>
 
-<section id="education">
+<!-- EDUCATION -->
+
+<section id="education" class="education-section">
 
     <div class="section-title">
+        <span class="section-label">Academic background</span>
         <h2>Education</h2>
-        <p>My academic qualification.</p>
+        <p>The academic foundation behind my analytical approach.</p>
     </div>
 
     <div class="education-box">
+
+        <div class="education-label">Academic Qualification</div>
+
         <h3>Bachelor of Nursing Science (B.NSc.)</h3>
+
         <p>Ahmadu Bello University, Zaria</p>
+
         <p>Kaduna State, Nigeria</p>
+
         <p>2026</p>
+
     </div>
 
 </section>
 
-<section id="training">
+<!-- TRAINING -->
+
+<section id="training" class="training-section">
 
     <div class="section-title">
+        <span class="section-label">Continuous development</span>
         <h2>Certifications & Professional Training</h2>
-        <p>My completed and ongoing professional development.</p>
+        <p>Professional learning, technical development and ongoing training.</p>
     </div>
 
     <div class="training-grid">
 
         <div class="card">
+
+            <div class="card-icon">DEA</div>
+
             <h3>Data Analytics – DEA</h3>
+
             <p>Digital Empowered Academy</p>
-            <p><strong>Status:</strong> Training completed; certificate pending.</p>
+
+            <span class="status">Training Completed · Certificate Pending</span>
+
         </div>
 
         <div class="card">
+
+            <div class="card-icon">CHM</div>
+
             <h3>Data Analytics – CHM Academy</h3>
-            <p><strong>Status:</strong> Ongoing.</p>
+
+            <p>Professional Data Analytics Training</p>
+
+            <span class="status ongoing">Ongoing</span>
+
         </div>
 
         <div class="card">
+
+            <div class="card-icon">CN</div>
+
             <h3>Data Analytics – Cisco Networking Academy</h3>
-            <p><strong>Status:</strong> Ongoing.</p>
+
+            <p>Professional Data Analytics Training</p>
+
+            <span class="status ongoing">Ongoing</span>
+
         </div>
 
         <div class="card">
+
+            <div class="card-icon">IT</div>
+
             <h3>IT Essentials</h3>
+
             <p>Cisco Networking Academy, Ahmadu Bello University, Zaria.</p>
+
         </div>
 
         <div class="card">
+
+            <div class="card-icon">ML</div>
+
             <h3>Microsoft Digital Literacy</h3>
+
             <p>Cisco Networking Academy, Ahmadu Bello University, Zaria.</p>
+
         </div>
 
     </div>
 
 </section>
 
+<!-- CONTACT -->
+
 <section id="contact" class="contact">
 
     <div class="section-title">
+
+        <span class="section-label">Let's work together</span>
+
         <h2>Let's Connect</h2>
-        <p>Feel free to reach out for professional opportunities and collaboration.</p>
+
+        <p>
+            Interested in collaboration, professional opportunities
+            or a conversation about data analytics? I'd be glad to connect.
+        </p>
+
     </div>
 
     <div class="contact-details">
@@ -654,7 +1328,8 @@
         </p>
 
         <p>
-            <strong>Location:</strong> Samaru, Zaria, Kaduna State, Nigeria
+            <strong>Location:</strong>
+            Samaru, Zaria, Kaduna State, Nigeria
         </p>
 
         <p>
@@ -671,7 +1346,7 @@
             <a href="https://www.linkedin.com/in/sediq-muhammed-404b743a1/"
                target="_blank"
                rel="noopener noreferrer">
-                linkedin.com/in/sediq-muhammed-404b743a1
+                Muhammed Sediq Sule
             </a>
         </p>
 
@@ -679,10 +1354,12 @@
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
 
     <p>
-        &copy; 2026 Muhammed Sediq Sule.
+        &copy; 2026 <strong>Muhammed Sediq Sule.</strong>
         All Rights Reserved.
     </p>
 
@@ -692,4 +1369,3 @@
 
 </body>
 </html>
-```
