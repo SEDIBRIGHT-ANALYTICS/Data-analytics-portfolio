@@ -1,0 +1,52 @@
+# TRANSPORT FARE ANALYSIS IN NIGERIA
+
+## 1. Project Overview
+
+This project analyses transport fares across different states and transport types in Nigeria using Microsoft Power BI and Microsoft Excel. It explores variations in transport costs across locations and routes, providing an opportunity to understand patterns in transportation pricing.
+
+## 2. Project Objectives
+
+The objectives of this project are to:
+
+- Examine transport fare variations across Nigerian states.
+- Compare fares across different transport types.
+- Identify routes with relatively high transport fares.
+- Explore the relationship between travel distance and fare.
+- Present the analysis through interactive Power BI visualisations.
+
+## 3. Dataset Description
+
+The dataset contains 52,500 records and 8 columns, covering transport information across Nigerian states and routes.
+
+Key fields include:
+
+- State
+- Transport Type
+- Route
+- Distance (KM)
+- Fare (NGN)
+- Notes
+- Entered By
+- Random Text
+
+The dataset contains information covering 36 states, 11 transport types and 226 distinct routes after standardising text entries.
+
+## 4. Tools Used
+
+- **Microsoft Excel:** Dataset inspection and preparation.
+- **Microsoft Power BI:** Data modelling, analysis and visualisation.
+
+## 5. Project Components
+
+The Power BI report contains two pages:
+
+1. Chart
+2. Dashboard and Wireframe
+
+## 6. Data Preparation
+
+Data preparation involved inspecting the dataset for missing values, reviewing inconsistent text entries, checking fare values and identifying fields that may not be relevant to the analysis.
+
+## 7. Project Purpose
+
+The project demonstrates the application of data analytics and business intelligence techniques to transportation data, with the aim of presenting information in a clear and accessible format that supports better understanding of transport fare patterns in Nigeria.
