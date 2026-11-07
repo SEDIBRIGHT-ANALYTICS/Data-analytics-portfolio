@@ -2,23 +2,26 @@
 
 ## 1. Project Overview
 
-This project analyses transport fares across different states and transport types in Nigeria using Microsoft Power BI and Microsoft Excel. It explores variations in transport costs across locations and routes, providing an opportunity to understand patterns in transportation pricing.
+This project examines transport fare patterns across different states, routes, and transport types in Nigeria using Microsoft Power BI and Microsoft Excel. It explores variations in transportation costs across geographical locations and transport categories, providing insights into how fares differ across the Nigerian transportation system.
+
+The project involves dataset inspection, preparation, analysis, and interactive visualisation to transform raw transportation records into meaningful and accessible information.
 
 ## 2. Project Objectives
 
 The objectives of this project are to:
 
-- Examine transport fare variations across Nigerian states.
-- Compare fares across different transport types.
-- Identify routes with relatively high transport fares.
-- Explore the relationship between travel distance and fare.
-- Present the analysis through interactive Power BI visualisations.
+- Examine variations in average transport fares across Nigerian states.
+- Compare average fares across different transport types.
+- Analyse the distribution of recorded routes across transport types.
+- Identify routes with relatively high average transport fares.
+- Explore differences in transportation costs across recorded routes.
+- Present the findings through interactive Power BI visualisations.
 
 ## 3. Dataset Description
 
-The dataset contains 52,500 records and 8 columns, covering transport information across Nigerian states and routes.
+The dataset contains **52,500 records and 8 columns**, covering transportation information across Nigerian states, routes, and transport categories.
 
-Key fields include:
+The dataset contains the following fields:
 
 - State
 - Transport Type
@@ -29,24 +32,49 @@ Key fields include:
 - Entered By
 - Random Text
 
-The dataset contains information covering 36 states, 11 transport types and 226 distinct routes after standardising text entries.
+Following the standardisation of text entries, the dataset covers:
 
-## 4. Tools Used
+- **36 Nigerian states**
+- **11 transport types**
+- **226 distinct routes**
 
-- **Microsoft Excel:** Dataset inspection and preparation.
-- **Microsoft Power BI:** Data modelling, analysis and visualisation.
+The dataset also contains fare information recorded in Nigerian Naira (NGN).
+
+## 4. Tools and Technologies Used
+
+- **Microsoft Excel:** Used for dataset inspection and preparation.
+- **Microsoft Power BI:** Used for data modelling, analysis, and interactive visualisation.
 
 ## 5. Project Components
 
-The Power BI report contains two pages:
+The Power BI report consists of two main pages:
 
-1. Chart
-2. Dashboard and Wireframe
+1. **Chart:** Presents the individual analytical visualisations.
+2. **Dashboard and Wireframe:** Provides the dashboard presentation of the analysis.
+
+The analytical visuals include:
+
+- Average Fare by Route
+- Average Fare by Transport Type
+- Count of Routes by Transport Type
+- Average Fare by State
 
 ## 6. Data Preparation
 
-Data preparation involved inspecting the dataset for missing values, reviewing inconsistent text entries, checking fare values and identifying fields that may not be relevant to the analysis.
+Data preparation involved inspecting the dataset for missing values, inconsistent text entries, duplicate records, and issues affecting numerical analysis.
 
-## 7. Project Purpose
+The preparation process also involved standardising state names, transport-type entries, and route descriptions, as well as reviewing fare values to support accurate numerical analysis.
 
-The project demonstrates the application of data analytics and business intelligence techniques to transportation data, with the aim of presenting information in a clear and accessible format that supports better understanding of transport fare patterns in Nigeria.
+## 7. Project Purpose and Significance
+
+The purpose of this project is to demonstrate the application of data analytics and business intelligence techniques to transportation data in Nigeria.
+
+By using Microsoft Excel and Power BI, the project illustrates how raw transportation records can be organised, analysed, and presented through visualisations that make transport fare patterns easier to explore and understand.
+
+---
+
+**Project Category:** Data Analytics and Business Intelligence
+
+**Primary Tool:** Microsoft Power BI
+
+**Supporting Tool:** Microsoft Excel
